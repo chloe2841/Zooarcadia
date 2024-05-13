@@ -132,11 +132,48 @@ h4{
     font-size: 25px; /* Taille de la police */
     font-weight: bold;
 }
+.image-card{
+    position:relative;
+    &:hover{
+        .titre-image{
+            opacity: 1;
+        }
+        img{
+            filter: brightness(0.3);
+        }
+    }
+
+    img{
+        transition: all 0.3s;
+    }
+    .titre-image{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.3s;
+        text-align: center;
+        font-weight: bold;
+        font-size: 15px;
+        font-family: $font-family-serif;
+    }
+}
+.same-size-image {
+    width: 600px; /* Définissez une largeur plus grande pour les écrans plus grands */
+    height: 500px; /* Définissez une hauteur plus grande pour les écrans plus grands */
+    object-fit: cover; /* Assurez-vous que l'image remplit complètement le conteneur */
+}
 /* Media query pour les tablettes */
 @media screen and (max-width: 768px) {
     .gridSection {
         grid-template-columns: repeat(2, 1fr); /* Passage à 2 colonnes */
         grid-auto-rows: minmax(auto, auto); /* Hauteur automatique des lignes */
+    }
+    .same-size-image {
+        width: 400px; /* Définissez la largeur souhaitée */
+        height: 300px; /* Définissez la hauteur souhaitée */
+        object-fit: cover; /* Assurez-vous que l'image remplit complètement le conteneur */
     }
 }
 /* Media query pour les smartphones */

@@ -12113,11 +12113,49 @@ h4, .h4 {
   font-weight: bold;
 }
 
+.image-card {
+  position: relative;
+}
+.image-card:hover .titre-image {
+  opacity: 1;
+}
+.image-card:hover img {
+  filter: brightness(0.3);
+}
+.image-card img {
+  transition: all 0.3s;
+}
+.image-card .titre-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Orelega One", serif;
+}
+
+.same-size-image {
+  width: 600px; /* Définissez une largeur plus grande pour les écrans plus grands */
+  height: 500px; /* Définissez une hauteur plus grande pour les écrans plus grands */
+  -o-object-fit: cover;
+     object-fit: cover; /* Assurez-vous que l'image remplit complètement le conteneur */
+}
+
 /* Media query pour les tablettes */
 @media screen and (max-width: 768px) {
   .gridSection {
     grid-template-columns: repeat(2, 1fr); /* Passage à 2 colonnes */
     grid-auto-rows: minmax(auto, auto); /* Hauteur automatique des lignes */
+  }
+  .same-size-image {
+    width: 400px; /* Définissez la largeur souhaitée */
+    height: 300px; /* Définissez la hauteur souhaitée */
+    -o-object-fit: cover;
+       object-fit: cover; /* Assurez-vous que l'image remplit complètement le conteneur */
   }
 }
 /* Media query pour les smartphones */
