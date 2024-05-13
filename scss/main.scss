@@ -99,6 +99,39 @@ p{
     height: 120px; 
     border-radius: 100px;
 }
+h4{
+    font-weight: bold;
+    font-family: $font-family-sans-serif;
+    justify-content: center;
+}
+.border{
+    border: 1px solid black;
+    border-radius: 20px 0 20px 0;
+    padding: 10px;
+}
+.conteneur {
+    position: relative;
+    text-align: center;
+}
+.conteneur img{
+    filter: brightness(0.5);
+}
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Couleur du texte */
+    padding: 20px;
+    border-radius: 10px; /* Bordure arrondie */
+}
+
+.overlay p {
+    font-family: $font-family-serif;
+    margin: 0;
+    font-size: 25px; /* Taille de la police */
+    font-weight: bold;
+}
 /* Media query pour les tablettes */
 @media screen and (max-width: 768px) {
     .gridSection {
