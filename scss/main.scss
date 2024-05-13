@@ -1,1 +1,22 @@
 @import 'custom';
+html{
+    position:relative;
+    min-height:100%;
+}
+main{
+    margin-bottom:270px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* pour s'assurer que le header est au-dessus des autres éléments */
+    transition: top 0.3s; /* transition fluide lors du défilement */
+}
+
+footer.footer{
+    padding:15px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
