@@ -20,3 +20,96 @@ footer.footer{
     bottom:0;
     width:100%;
 }
+h1, h2, h3{
+    font-family: $font-family-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+p{
+    font-family: $font-family-sans-serif;
+    font-size: 20px;
+}
+.hero-scene{
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image: url(../images/RESTO.png);
+        background-size: cover;
+        filter: brightness(0.3);
+    }
+
+    *{
+        //Positionner les éléments devant le ::before
+        position:relative;
+    }
+
+    .hero-scene-content{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.gridSection{
+    background-color:$success;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.gridSection > div{
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.gridSection h1{
+    border: 1px solid black;
+    border-radius: 50px;
+    margin: 20px;
+    font-family: "open sans",sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    grid-column: 1 / -1;
+    text-align: center;
+}
+.gridSection h2{
+    font-family: "open sans",sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 28px;
+}
+.gridSection p{
+    font-family: "open sans", sans-serif;
+    margin-top:20px ;
+    font-size: 16px;
+}
+.gridSection h1, .gridSection h2, .gridSection p {
+    text-align: center; 
+}
+.gridSection .imageContainer img {
+    margin-top: 40px;
+    align-items: center;
+    width: 120px; 
+    height: 120px; 
+    border-radius: 100px;
+}
+/* Media query pour les tablettes */
+@media screen and (max-width: 768px) {
+    .gridSection {
+        grid-template-columns: repeat(2, 1fr); /* Passage à 2 colonnes */
+        grid-auto-rows: minmax(auto, auto); /* Hauteur automatique des lignes */
+    }
+}
+/* Media query pour les smartphones */
+@media screen and (max-width: 600px) {
+    .gridSection {
+        grid-template-columns: 1fr; /* Passage à une seule colonne */
+        grid-auto-rows: repeat(6, minmax(auto, auto)); /* Passage à 6 lignes */
+    }
+}
