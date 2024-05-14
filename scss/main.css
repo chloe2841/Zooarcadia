@@ -12113,6 +12113,12 @@ h4, .h4 {
   font-weight: bold;
 }
 
+.texte-habitat {
+  background-color: #A8BFA3;
+  border-radius: 25px;
+  line-height: 25px;
+}
+
 .image-card {
   position: relative;
 }
@@ -12147,10 +12153,6 @@ h4, .h4 {
 
 /* Media query pour les tablettes */
 @media screen and (max-width: 768px) {
-  .gridSection {
-    grid-template-columns: repeat(2, 1fr); /* Passage à 2 colonnes */
-    grid-auto-rows: minmax(auto, auto); /* Hauteur automatique des lignes */
-  }
   .same-size-image {
     width: 400px; /* Définissez la largeur souhaitée */
     height: 300px; /* Définissez la hauteur souhaitée */
