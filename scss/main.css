@@ -12151,6 +12151,23 @@ h4, .h4 {
      object-fit: cover; /* Assurez-vous que l'image remplit complètement le conteneur */
 }
 
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 /* Media query pour les tablettes */
 @media screen and (max-width: 768px) {
   .same-size-image {
