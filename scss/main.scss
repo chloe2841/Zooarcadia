@@ -185,6 +185,10 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.avis-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
 /* Media query pour les tablettes */
 @media screen and (max-width: 768px) {
     .same-size-image {
