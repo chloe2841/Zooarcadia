@@ -1,0 +1,37 @@
+
+    <div class="filter-buttons text-center mt-4">
+        <button class="btn btn-secondary text-white" onclick="filterImages('all')">Tous</button>
+        <button class="btn btn-secondary text-white" onclick="filterImages('savane')">Savane</button>
+        <button class="btn btn-secondary text-white" onclick="filterImages('marais')">Marais</button>
+        <button class="btn btn-secondary text-white" onclick="filterImages('jungle')">Jungle</button>
+    </div>
+    <div class="image-gallery">
+        <div class="image-item savane">
+            <img src="images/lion.jpg" alt="Lion">
+            <div>
+            <button class="btn btn-secondary text-white" onclick="showDetails('lion')">Détails</button>
+        </div>
+        </div>
+        <div class="image-item jungle">
+            <img src="/images/serpent.jpg" alt="Serpent">
+            <button class="btn btn-secondary text-white" onclick="showDetails('serpent')">Détails</button>
+        </div>
+        <div class="image-item jungle">
+            <img src="/images/tigre.jpg" alt="Tigre">
+            <button class="btn btn-secondary text-white" onclick="showDetails('tigre')">Détails</button>
+        </div>
+        <div class="image-item marais">
+            <img src="/images/poisson.jpg" alt="Poisson">
+            <button class="btn btn-secondary text-white" onclick="showDetails('poisson')">Détails</button>
+        </div>
+        <div class="image-item savane">
+            <img src="/images/elephanyt.png" alt="Elephant">
+            <button class="btn btn-secondary text-white" onclick="showDetails('elephant')">Détails</button>
+        </div>
+    </div>
+    <div id="details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="details-content"></div>
+        </div>
+    </div>
