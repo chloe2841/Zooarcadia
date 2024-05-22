@@ -8,7 +8,7 @@ export const allRoutes = [
     new Route("/contact", "Contact", "/pages/contact.html"),
     new Route("/connexion", "Connexion", "/pages/connexion.html"),
     new Route("/avis", "Avis", "/pages/avis.html"),
-    new Route("/animaux", "Animaux", "/pages/animaux.html"),];
+    new Route("/animaux", "Animaux", "/pages/animaux.html","/js/filtre.js"),];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename
 export const websiteName = "Zoo Arcadia";
